@@ -1,14 +1,11 @@
-%%
-%原始程序
-clear;clc;
-% for si_1=1:10
-    [~,~,data1_0]=xlsread('D:\data\CATS-Lab-ACC-data-main\CATS-Lab-ACC-data-main\test1124\test8.xlsx',1);
-    [~,~,data1_1]=xlsread('D:\data\CATS-Lab-ACC-data-main\CATS-Lab-ACC-data-main\test1124\test8.xlsx',2);
-    [~,~,data1_2]=xlsread('D:\data\CATS-Lab-ACC-data-main\CATS-Lab-ACC-data-main\test1124\test8.xlsx',3);
+clear;
+clc;
+%% Hybrid Data
+[~,~,data1_1]=xlsread('D:\project\data\test5.xlsx',1);
+[~,~,data1_2]=xlsread('D:\project\data\test5.xlsx',2);
+[~,~,data2_1]=xlsread('D:\project\data\test9.xlsx',1);
+[~,~,data2_2]=xlsread('D:\project\data\test9.xlsx',2);
 
-% data1_0=xlsread('G:\a\test1.xlsx',1);
-% data1_1=xlsread('G:\a\test1.xlsx',2);
-% data1_2=xlsread('G:\a\test1.xlsx',3);
 %%
 %参数值（距离单位：m；速度单位：m/s）
 value_v=0.05;%启动速度阈值
