@@ -5,18 +5,16 @@ clc;
 [~,~,data1_2]=xlsread('D:\project\data\test5.xlsx',2);
 [~,~,data2_1]=xlsread('D:\project\data\test9.xlsx',1);
 [~,~,data2_2]=xlsread('D:\project\data\test9.xlsx',2);
-
-%%
-%参数值（距离单位：m；速度单位：m/s）
+% 2.time 3.lon 4.lat 5.velocity(m/s) data1.lead data2.follower
 value_v=0.05;%启动速度阈值
 Hz=10;%采样频率
-% data1_0=cell2mat(data1_0);
-P_T_0=cell2mat(data1_0(:,2));
-Time_1_0=str2num(P_T_0(:,end-7:end));
-% start_v_1_0=cell2mat(data1_0(:,5));
-% start0=find(start_v_1_0>0.1);
 P_T_1=cell2mat(data1_1(:,2));
 Time_1_1=str2num(P_T_1(:,end-7:end));
+P_T_2=cell2mat(data1_2(:,2));
+Time_1_2=str2num(P_T_2(:,end-7:end));
+start_1 = (Time_1_2(1)-Time_1_1(1))*10+1;
+end_1 = (Time_1_1(end)-Time_1_1(1))*10+1;
+
 start_v_1_1=cell2mat(data1_1(:,5));
 start1=find(start_v_1_1>0.1);
 t_end_1=Time_1_1(start1(end));
