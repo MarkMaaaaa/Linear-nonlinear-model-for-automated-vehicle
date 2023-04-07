@@ -12,11 +12,11 @@ P_T_1=cell2mat(data1_1(:,2));
 Time_1_1=str2num(P_T_1(:,end-7:end));
 P_T_2=cell2mat(data1_2(:,2));
 Time_1_2=str2num(P_T_2(:,end-7:end));
-start_1 = (Time_1_2(1)-Time_1_1(1))*10+1;
-end_1 = (Time_1_2(end)-Time_1_1(end))*10+1;
+start_1 = (Time_1_1(1)-Time_1_2(1))*10+1;
+end_1 = (Time_1_1(end)-Time_1_2(end))*10+1;
 
-start_v_1_1=cell2mat(data1_1(start_1:end,5));
-start_v_1_2=cell2mat(data1_2(1:end_1,5));
+start_v_1_1=cell2mat(data1_1(1:end-end_1,5));
+start_v_1_2=cell2mat(data1_2(start_1:end,5));
 
 start1=find(start_v_1_1>0.1);
 t_end_1=Time_1_1(start1(end));
