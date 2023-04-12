@@ -10,7 +10,7 @@ clc;
 %参数值（距离单位：m；速度单位：m/s）
 value_v=0.05;%启动速度阈值
 Hz=10;%采样频率
-% data1_0=cell2mat(data1_0);
+% data1_0=cell2mat(data1_0); 
 P_T_0=cell2mat(data1_0(:,2));
 Time_1_0=str2num(P_T_0(:,end-7:end));
 % start_v_1_0=cell2mat(data1_0(:,5));
